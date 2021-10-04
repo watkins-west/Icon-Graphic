@@ -1,0 +1,119 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+* {
+    box-sizing: border-box;
+    background-color: #fff2ef;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    font-family: Georgia, serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+li {
+    font-size: 1rem;
+    padding-left: 30px;
+    padding-right: 13px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.container.image {
+  padding: 0;
+  max-width: 800px;
+}
+
+.container.caption {
+  max-width: 800px;
+}
+
+.body-photo.container.image {
+  max-width: 600px;
+}
+
+.header {
+  text-align: center;
+  margin-top: 5px;
+  position: sticky;
+  padding-top: 5px;
+}
+
+.caption {
+  font-size: 0.9rem;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.fa-li {
+  font-size: 1.5rem;
+  margin-left: 20px;
+}
+
+.byline {
+  font-weight: bold;
+}
+
+
+.icons {
+  border: solid 1px #000D09;
+} 
+
+#audio-nudge {
+  color: #000D09;
+  padding-top: 10px;
+}
+
+.icons, .fa-li, .fa-ul, .fa-bed, .fa-users, .fa-usd, .list-item, li {
+  background-color: #df8e7c;
+  color: #000D09;
+}
+
+.hr {
+  color: #000D09;
+}
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+}
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 729px) {
+
+
+  .icons {
+    width: 41%;
+  }
+
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+}
